@@ -1,11 +1,7 @@
 <script setup>
-import MyHello from './components/MyHello.vue';
+
 </script>
 
 <template>
-  <MyHello />
-  <p>Hello Vue</p>
+  <h1 class="text-3xl font-bold underline">Hello vue</h1>
 </template>
-
-
-<style scoped></style>
