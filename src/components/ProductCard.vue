@@ -1,6 +1,6 @@
 <template>
   <article
-    class="relative flex flex-col gap-2 md:gap-3 w-full px-4 md:px-8 py-2 md:py-4 bg-white text-left rounded-[16px] lg:rounded-[24px] border border-gray-200">
+    class="relative flex flex-col gap-2 md:gap-3 w-full px-4 md:px-8 py-2 md:py-4 bg-white text-left rounded-2xl lg:rounded-3xl border border-gray-200 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl">
     <div class="relative self-center h-28 w-28 md:w-33 overflow-hidden">
       <img src="/sneakers/sneakers-1.jpg" alt="Sneakers pair" class="h-auto w-full absolute bottom-0">
     </div>
@@ -10,9 +10,8 @@
         <span class="text-xs text-gray-400 uppercase">цена:</span>
         <strong class="block text-sm">129$</strong>
       </div>
-      <img src="/plus.svg" alt="#" class="cursor-pointer">
+      <img src="/plus.svg" alt="Plus">
     </div>
-    <img src="/public/like-1.svg" alt="Like" class="absolute w-8 h-8 cursor-pointer">
+    <img src="/public/like-1.svg" alt="Like" class="absolute w-8 h-8">
   </article>
 </template>
-/÷
