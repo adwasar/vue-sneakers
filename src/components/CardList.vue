@@ -1,11 +1,14 @@
 <script setup>
 import ProductCard from './ProductCard.vue';
 
-const props = defineProps(["productCards"])
+const props = defineProps({
+  productCards: {
+    type: Array,
+    required: true
+  }
+})
 
 const { productCards } = props
-
-console.log(props)
 </script>
 
 

@@ -1,5 +1,20 @@
 <script setup>
-const props = defineProps(['card'])
+
+const props = defineProps({
+  card: {
+    type: Object,
+    required: true,
+    validator: (value) => {
+      return (
+        typeof value.imgPath === 'string' &&
+        typeof value.title === 'string' &&
+        typeof value.price === 'number' &&
+        typeof value.isLiked === 'boolean' &&
+        typeof value.isAdded === 'boolean'
+      )
+    }
+  },
+});
 
 const { imgPath, title, price } = props.card
 </script>
@@ -20,6 +35,6 @@ const { imgPath, title, price } = props.card
       </div>
       <img src="/plus.svg" alt="Plus">
     </div>
-    <img src="/public/like-1.svg" alt="Like" class="absolute w-8 h-8">
+    <img src="/like-1.svg" alt="Like" class="absolute w-8 h-8">
   </article>
 </template>
