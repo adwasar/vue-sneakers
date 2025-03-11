@@ -1,11 +1,16 @@
 <script setup>
+import { inject } from 'vue';
+
 defineProps({
   imgPath: String,
   title: String,
   price: Number,
   isLiked: Boolean,
   isAdded: Boolean,
+  id: Number,
 })
+
+const addToFavorite = inject('addToFavorite')
 </script>
 
 <template>
@@ -23,6 +28,6 @@ defineProps({
       </div>
       <img src="/plus.svg" alt="Plus" />
     </div>
-    <img src="/like-1.svg" alt="Like" class="absolute w-8 h-8" />
+    <img :src="isLiked ? '/like-2.svg' : '/like-1.svg'" alt="Like" @click="addToFavorite(id)" class="absolute w-8 h-8" />
   </article>
 </template>
