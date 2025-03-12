@@ -23,7 +23,7 @@ const addToСart = inject('addToСart')
     </div>
     <h3 class="text-xs md:text-sm">{{ title }}</h3>
     <div class="flex justify-between mt-auto">
-      <div nt>
+      <div>
         <span class="text-xs text-gray-400 uppercase">цена:</span>
         <strong class="block text-sm">{{ price }}$</strong>
       </div>

@@ -1,5 +1,5 @@
 <script setup>
-import ProductCard from './ProductCard.vue'
+import AppCard from './AppCard.vue'
 
 defineProps({
   cards: {
@@ -11,9 +11,9 @@ defineProps({
 
 <template>
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 mt-10 gap-2 md:gap-4">
-    <ProductCard
-      v-for="(card, index) in cards"
-      :key="index"
+    <AppCard
+      v-for="card in cards"
+      :key="card.id"
       :imgPath="card.imgPath"
       :title="card.title"
       :price="card.price"
