@@ -37,6 +37,7 @@ const closeCart = () => {
 provide('addToFavorite', addToFavorite)
 provide('addToСart', addToСart)
 provide('closeCart', closeCart)
+provide('cards', cards)
 </script>
 
 <template>
