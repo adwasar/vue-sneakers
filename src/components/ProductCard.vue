@@ -1,16 +1,19 @@
 <script setup>
 import { inject } from 'vue';
 
-defineProps({
+const props = defineProps({
   imgPath: String,
   title: String,
   price: Number,
   isLiked: Boolean,
-  isAdded: Boolean,
+  isAddedToCart: Boolean,
   id: Number,
 })
 
 const addToFavorite = inject('addToFavorite')
+const addToСart = inject('addToСart')
+
+console.log(props.isAddedToCart)
 </script>
 
 <template>
@@ -26,8 +29,8 @@ const addToFavorite = inject('addToFavorite')
         <span class="text-xs text-gray-400 uppercase">цена:</span>
         <strong class="block text-sm">{{ price }}$</strong>
       </div>
-      <img src="/plus.svg" alt="Plus" class="cursor-pointer" />
+      <img :src="isAddedToCart ?  '/checked.svg' : '/plus.svg'" @click="addToСart(id)" class="cursor-pointer" />
     </div>
-    <img :src="isLiked ? '/like-2.svg' : '/like-1.svg'" alt="Like" @click="addToFavorite(id)" class="absolute w-8 h-8 cursor-pointer" />
+    <img :src="isLiked ? '/like-2.svg' : '/like-1.svg'" @click="addToFavorite(id)" class="absolute w-8 h-8 cursor-pointer" />
   </article>
 </template>

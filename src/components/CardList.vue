@@ -18,7 +18,7 @@ defineProps({
       :title="card.title"
       :price="card.price"
       :isLiked="card.isLiked"
-      :isAdded="card.isAdded"
+      :isAddedToCart="card.isAddedToCart"
       :id="card.id"
     />
   </div>

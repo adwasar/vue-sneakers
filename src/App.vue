@@ -15,7 +15,15 @@ const addToFavorite = (id) => {
   }
 }
 
+const addToСart = (id) => {
+  const item = cards.value.find((item) => item.id === id)
+  if (item) {
+    item.isAddedToCart = !item.isAddedToCart
+  }
+}
+
 provide('addToFavorite', addToFavorite)
+provide('addToСart', addToСart)
 </script>
 
 <template>
