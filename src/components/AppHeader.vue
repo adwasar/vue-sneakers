@@ -2,6 +2,8 @@
 import CartIcon from './icons/CartIcon.vue'
 import HeartIcon from './icons/HeartIcon.vue'
 import ProfileIcon from './icons/ProfileIcon.vue'
+
+defineEmits(['openCart'])
 </script>
 
 <template>
@@ -19,6 +21,7 @@ import ProfileIcon from './icons/ProfileIcon.vue'
     <ul class="flex gap-x-4 md:gap-x-6 xl:gap-x-8">
       <li
         class="flex items-center gap-x-2 cursor-pointer text-gray-600 font-semibold hover:text-black"
+        @click="() => $emit('openCart')"
       >
         <CartIcon />
         <span class="hidden xl:inline">600&nbsp;грн</span>

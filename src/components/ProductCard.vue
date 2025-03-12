@@ -1,7 +1,7 @@
 <script setup>
 import { inject } from 'vue';
 
-const props = defineProps({
+defineProps({
   imgPath: String,
   title: String,
   price: Number,
@@ -12,8 +12,6 @@ const props = defineProps({
 
 const addToFavorite = inject('addToFavorite')
 const addToСart = inject('addToСart')
-
-console.log(props.isAddedToCart)
 </script>
 
 <template>
